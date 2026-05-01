@@ -1,0 +1,110 @@
+:root {
+    --maroon: #580126;
+    --gold: #D4AF37;
+    --cream: #FFFDF5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cream);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    color: var(--maroon);
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=2069') no-repeat center center/cover;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(88, 1, 38, 0.7);
+    z-index: 1; /* Sits behind text */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10; /* Sits in front of overlay */
+    padding: 20px;
+    color: var(--gold);
+}
+
+.om-symbol { font-size: 4rem; margin-bottom: 20px; }
+.names {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: clamp(2rem, 8vw, 4rem);
+    margin: 10px 0;
+    letter-spacing: 5px;
+}
+
+.event-section {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    background: var(--cream);
+}
+
+.card {
+    background: white;
+    border: 2px solid var(--gold);
+    padding: 40px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.date-box {
+    border-top: 1px solid var(--gold);
+    border-bottom: 1px solid var(--gold);
+    padding: 20px 0;
+    margin: 20px 0;
+}
+
+.main-date { display: block; font-size: 2rem; font-weight: bold; }
+
+.map-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--maroon);
+    color: var(--gold);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    text-align: center;
+    padding: 60px 20px;
+    background: var(--maroon);
+    color: var(--gold);
+}
